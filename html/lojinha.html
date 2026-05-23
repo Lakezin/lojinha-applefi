@@ -1,117 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/lojinha_css.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <title>Lake tem que fazer tudo</title>
-
+  <title>Applefy | Experience Technology</title>
 </head>
 <body>
-  <header>
-    <div class="logo">Applefy</div>
-    <div class="search-container">
-      <input type="text" placeholder="O que você está procurando? Digite aqui..." />
-      <button>🔍</button>
+  <header class="cabecalho">
+    <div class="container cabecalho-wrapper">
+      <div class="logotipo">applefy</div>
+      <div class="container-busca">
+        <input type="text" placeholder="Pesquise por iPhones, MacBooks..." />
+        <button aria-label="Buscar"><i class="bx bx-search"></i></button>
+      </div>
     </div>
   </header>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Departamentos</a></li>
-      <li><a href="#">Periféricos</a></li>
-      <li><a href="#">Promoções</a></li>
-      <li><a href="#">PCs Gamers</a></li>
-      <li><a href="#" class="add">Adicionar</a></li>
-    </ul>
+
+  <nav class="barra-navegacao">
+    <div class="container">
+      <ul class="links-navegacao">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Periféricos</a></li>
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">PCs Gamers</a></li>
+          <li><button class="btn-adicionar-nav" id="abrir-modal">Adicionar</button></li>
+      </ul>
+    </div>
   </nav>
-  <main>
-    <h2>
-      Melhores promoções do dia
-    </h2>
-    <section class="products--promotion">
 
-
-    </section>
-    <h2>
-          Mais Vendidos
-    </h2>
-
-    <section class="products">
-      
+  <main class="conteudo-principal container">
+    <h2 class="titulo-secao">Lançamentos da Semana</h2>
+    <section class="grade-produtos">
     </section>
   </main>
-  <footer>
-  <div class="footer--container">
-    <section>
-      <h3>Suporte ao Cliente</h3>
-      <ul>
-        <li>
-          <a href="#">Minha Conta</a>
-        </li>
-        <li>
-          <a href="#">Rastrear Pedido</a>
-        </li>
-        <li>
-          <a href="#">Garantia e RMA</a>
-        </li>
-        <li>
-          <a href="#">Termos e permissões</a>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h3>Produtos</h3>
-      <ul>
-        <li>
-          <a href="#">PCs Gamer</a>
-        </li>
-        <li>
-          <a href="#">Workstations</a>
-        </li>
-        <li>
-          <a href="#">Periféricos</a>
-        </li>
-        <li>
-          <a href="#">Peças e Hardware</a>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h3>Nossa Empresa</h3>
-      <ul>
-        <li>
-          <a href="#">Sobre a Applefy</a>
-        </li>
-        <li>
-          <a href="#">Nossas Lojas</a>
-        </li>
-        <li>
-          <a href="#">Trabalhe Conosco</a>
-        </li>
-        <li>
-          <a href="#">Política de Privacidade</a>
-        </li>
-      </ul>
-    </section>
+
+  <footer class="rodape">
+    <div class="container grade-rodape">
+      <section class="coluna-rodape">
+        <h3>Suporte</h3>
+        <ul>
+          <li><a href="#">Minha Conta</a></li>
+          <li><a href="#">Rastreio</a></li>
+          <li><a href="#">Garantia</a></li>
+        </ul>
+      </section>
+
+      <section class="coluna-rodape">
+        <h3>Produtos</h3>
+        <ul>
+          <li><a href="#">PCs Gamer</a></li>
+          <li><a href="#">Periféricos</a></li>
+          <li><a href="#">Hardware</a></li>
+        </ul>
+      </section>
+
+      <section class="coluna-rodape">
+        <h3>Applefy</h3>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Privacidade</a></li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+
+  <div class="overlay-modal" id="modal-produto">
+    <div class="modal-adicionar">
+      <h3>Novo Produto</h3>
+      <input type="text" placeholder="Nome do produto" id="nome-produto" />
+      <input type="file" id="foto-produto" accept="image/*" />
+      <input type="number" placeholder="Valor (R$)" id="valor-produto" />
+      <div class="modal-acoes">
+        <button id="btn-salvar-produto">Salvar</button>
+        <button id="btn-fechar-modal">Cancelar</button>
+      </div>
+    </div>
   </div>
-</footer>
 
-<div class="quadrado">
-    <input type="text" placeholder="Nome do produto" id="nameProduct">
-    <input type="file" id="fotoProduct" accept="image/*">
-    <input type="number" placeholder=" Digite aqui o valor" id="valProduct">
-    <button id="addProduct">
-      Adicionar
-    </button>
-    <button id="close">
-      Fechar
-    </button>
-</div>
+  <script src="../js/lojinha.js">
+  </script>
 </body>
-<script src="../js/lojinha.js">
-
-</script>
 </html>
