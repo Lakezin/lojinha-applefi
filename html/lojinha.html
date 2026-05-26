@@ -29,7 +29,8 @@
         <li><a href="#">Periféricos</a></li>
         <li><a href="#">Promoções</a></li>
         <li><a href="#">PCs Gamers</a></li>
-          <li><button class="btn-adicionar-nav" id="abrir-modal">Adicionar</button></li>
+        <li><button class="btn-adicionar-nav" id="abrir-modal">Adicionar</button></li>
+        <li><button class="btn-adicionar-nav" id="btn-carrinho-nav" style="border-color: var(--cor-texto-secundario); color: var(--cor-texto-secundario);"><i class="bx bx-shopping-bag"></i> Carrinho</button></li>
       </ul>
     </div>
   </nav>
@@ -84,7 +85,45 @@
     </div>
   </div>
 
-  <script src="../js/lojinha.js">
-  </script>
+  <div class="overlay-carrinho" id="overlay-carrinho"></div>
+
+  <aside class="carrinho-lateral" id="carrinho-lateral">
+    <div class="carrinho-cabecalho">
+      <h3>Seu Carrinho</h3>
+      <button id="btn-fechar-carrinho" aria-label="Fechar carrinho"><i class="bx bx-x"></i></button>
+    </div>
+
+    <div class="itens-carrinho" id="itens-carrinho">
+      <div class="item-no-carrinho">
+        <div class="item-detalhes">
+          <p class="item-nome">iPhone 15 Pro Max</p>
+          <p class="item-preco">R$ 8999,00</p>
+        </div>
+        <button class="btn-remover-item" aria-label="Remover item">
+          <i class="bx bx-trash"></i>
+        </button>
+      </div>
+
+      <div class="item-no-carrinho">
+        <div class="item-detalhes">
+          <p class="item-nome">MacBook Pro 14</p>
+          <p class="item-preco">R$ 15499,00</p>
+        </div>
+        <button class="btn-remover-item" aria-label="Remover item">
+          <i class="bx bx-trash"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="carrinho-rodape">
+      <div class="carrinho-total">
+        <span>Total:</span>
+        <span id="valor-total-carrinho">R$ 24498,00</span>
+      </div>
+      <button class="btn-comprar" style="margin-top: 15px;">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <script src="../js/lojinha.js"></script>
 </body>
 </html>
