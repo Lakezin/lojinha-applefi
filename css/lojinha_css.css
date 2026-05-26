@@ -570,3 +570,88 @@ body {
     width: 100%;
   }
 }
+.controles-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.controles-quantidade button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 8px;
+
+  background: #424141;
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.controles-quantidade button:hover {
+  background: #a359e9;
+  transform: scale(1.05);
+}
+
+.controles-quantidade span {
+  min-width: 20px;
+  text-align: center;
+
+  font-weight: 600;
+  color: var(--cor-texto-principal);
+}
+.btn-quantidade {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ae10df;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-quantidade:hover {
+  background-color: #8810ce;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+}
+.btn-retorno {
+  position: fixed;
+
+  top: 20px;
+  left: 20px;
+
+  width: auto;
+  padding: 10px 18px;
+
+  border: 1px solid var(--cor-primaria);
+  border-radius: 50px;
+
+  background: transparent;
+  color: var(--cor-primaria);
+
+  text-decoration: none;
+  font-weight: 600;
+
+  z-index: 1000;
+
+  transition: 0.2s;
+}
+
+.btn-retorno:hover {
+  background: var(--cor-primaria);
+  color: white;
+}
